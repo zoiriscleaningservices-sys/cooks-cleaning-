@@ -1279,6 +1279,11 @@ p {
 }
 
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
     .nav-links { display: none; }
 
     .nav-container {
@@ -1323,17 +1328,92 @@ p {
         font-size: 1.4rem;
     }
     
-    .modern-service-card {
-        width: 85vw; /* Make cards slightly narrower on mobile to fit nicely */
-        max-width: 350px;
+    /* Center and stack services cards */
+    .services-slider-track {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+        transform: none !important; /* Disable Javascript slider transform on mobile */
     }
     
-    h1 { font-size: 3rem; }
-    .huge-text { font-size: 2.2rem; }
+    .slider-controls {
+        display: none; /* Hide slider controls since cards are stacked vertically */
+    }
     
-    .hero-content { padding-top: 4rem; }
-    .hero-actions { flex-direction: column; width: 100%; }
-    .btn-xl { width: 100%; }
+    .modern-service-card {
+        width: 100%; 
+        max-width: 400px;
+    }
+    
+    h1, .h1-style { 
+        font-size: 2.1rem !important; 
+        line-height: 1.2;
+    }
+    .huge-text { font-size: 1.8rem !important; }
+    
+    .hero {
+        min-height: 100svh !important; 
+        padding-top: 140px !important; /* Plenty of space under the sticky nav */
+        align-items: flex-start !important; /* Force to top */
+        justify-content: center;
+        padding-bottom: 40px !important;
+    }
+    
+    .hero-content { 
+        padding-top: 0 !important; 
+        padding-bottom: 0 !important; 
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .badge { margin-bottom: 1rem; }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-actions { 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 100%; 
+    }
+    
+    .btn-xl { 
+        width: 100%; 
+        max-width: 300px;
+        padding: 1rem 1.5rem;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+    
+    .hero-phone-popup {
+        margin-top: 2rem;
+    }
+    
+    .hero-phone-popup .glass-panel {
+        padding: 0.8rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .step-number {
+        font-size: 3.5rem;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .float-btn {
+        width: auto;
+        min-width: 200px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .floating-actions {
+        bottom: 120px; /* Prevent overlap with chat widget */
+    }
     
     .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
     .footer-bottom { flex-direction: column; gap: 1.5rem; text-align: center; }
@@ -1345,3 +1425,4 @@ p {
         padding: 1rem;
     }
 }
+

@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('slider-next');
     const dotsContainer = document.getElementById('slider-dots');
     
-    if (sliderTrack && cards.length > 0) {
+    if (sliderTrack && cards.length > 0 && window.innerWidth > 768) {
         const originalCount = cards.length;
         
         // Clone all cards and append to the end for the seamless forward loop
