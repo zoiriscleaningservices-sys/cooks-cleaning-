@@ -1391,11 +1391,62 @@ p {
     
     .hero-phone-popup {
         margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
     
     .hero-phone-popup .glass-panel {
-        padding: 0.8rem 1.5rem;
-        gap: 1rem;
+        display: flex !important;
+        padding: 1.5rem !important;
+        gap: 0.5rem !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 250px !important;
+        border-radius: 30px !important;
+    }
+    
+    .phone-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .form-info {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .form-info h2, .form-info p {
+        text-align: center !important;
+    }
+    
+    .contact-cards-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 1.5rem !important;
+    }
+    
+    .contact-card {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        padding: 2rem 1.5rem !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        box-sizing: border-box !important;
     }
 
     .step-number {
